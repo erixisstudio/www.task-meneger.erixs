@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.task meneger.erixis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- add new -->
+    <input style="position: absolute; top: 1pc; left: 5pc; background-color: chartreuse; color: rgb(83, 83, 83); font-size: 1pc; " maxlength="15" id="task name 1"></input>
+    <p style="position: absolute; top: 0%; left: 0%;">task name:</p>
+    <input type="checkbox" style="position: absolute; top: 1pc; left: 18pc;" id="today" checked></input>
+    <p style="position: absolute; top: 0%; left: 19.5pc; ">To day</p>
+    <input style="position: absolute; top: 3pc; left: 7pc; background-color: chartreuse; color: rgb(83, 83, 83); font-size: 1pc; " maxlength="50" id="taskdescription"></input>
+    <p style="position: absolute; top: 3.7%; left: 0%;">task description:</p>
+    <button onclick="addnewtask()" style="background-color: greenyellow;border-radius: 21% ;position: absolute; top: 6pc; left: 25pc; ">add</button>
+    <!-- tasks -->
+    <div> <!-- 1 -->
+        <p id="name1" style="position: absolute; top: 10pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 11.1pc; left: 7pc;" type="checkbox" disabled checked id="today1">
+        <p id="description1" style="position: absolute; top: 12pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 10pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 11pc; font-size: xx-small; left: 50%;" onclick="del1()">delete</button>
+    </div> 
+    <div> <!-- 2 -->
+        <p id="name2" style="position: absolute; top: 15pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 16.1pc; left: 7pc;" type="checkbox" disabled checked id="today2">
+        <p id="description2" style="position: absolute; top: 17pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 15pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 16pc; font-size: xx-small; left: 50%;" onclick="del2()">delete</button>
+    </div> 
+    <div> <!-- 3  -->
+        <p id="name3" style="position: absolute; top: 20pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 21.1pc; left: 7pc;" type="checkbox" disabled checked id="today3">
+        <p id="description3" style="position: absolute; top: 22pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 20pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 21pc; font-size: xx-small; left: 50%;" onclick="del3()">delete</button>
+    </div> <!-- 4 -->
+        <p id="name4" style="position: absolute; top: 25pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 26.1pc; left: 7pc;" type="checkbox" disabled checked id="today4">
+        <p id="description4" style="position: absolute; top: 27pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 25pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 26pc; font-size: xx-small; left: 50%;" onclick="del4()">delete</button>
+    </div>
+    <div> <!-- 5 -->
+        <p id="name5" style="position: absolute; top: 30pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 31.1pc; left: 7pc;" type="checkbox" disabled checked id="today5">
+        <p id="description5" style="position: absolute; top: 32pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 30pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 31pc; font-size: xx-small; left: 50%;" onclick="del5()">delete</button>
+    </div>
+    <div> <!-- 6 -->
+        <p id="name6" style="position: absolute; top: 35pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 36.1pc; left: 7pc;" type="checkbox" disabled checked id="today6">
+        <p id="description6" style="position: absolute; top: 37pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 30pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 36pc; font-size: xx-small; left: 50%;" onclick="del6()">delete</button>
+    </div> 
+    <div> <!-- 7 -->
+        <p id="name7" style="position: absolute; top: 40pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 41.1pc; left: 7pc;" type="checkbox" disabled checked id="today7">
+        <p id="description7" style="position: absolute; top: 42pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 40pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 41pc; font-size: xx-small; left: 50%;" onclick="del7()">delete</button>
+    </div> 
+    <div> <!-- 8  -->
+        <p id="name8" style="position: absolute; top: 45pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 46.1pc; left: 7pc;" type="checkbox" disabled checked id="today8">
+        <p id="description8" style="position: absolute; top: 47pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 45pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 46pc; font-size: xx-small; left: 50%;" onclick="del8()">delete</button>
+    <div> <!-- 9 -->
+        <p id="name9" style="position: absolute; top: 50pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 51.1pc; left: 7pc;" type="checkbox" disabled checked id="today9">
+        <p id="description9" style="position: absolute; top: 52pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 50pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 51pc; font-size: xx-small; left: 50%;" onclick="del9()">delete</button>
+    </div>
+    <div> <!-- 10 -->
+        <p id="name10" style="position: absolute; top: 55pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 56.1pc; left: 7pc;" type="checkbox" disabled checked id="today10">
+        <p id="description10" style="position: absolute; top: 57pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 55pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 56pc; font-size: xx-small; left: 50%;" onclick="del10()">delete</button>
+    </div>
+    <div> <!-- 11 -->
+        <p id="name11" style="position: absolute; top: 60pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 61.1pc; left: 7pc;" type="checkbox" disabled checked id="today11">
+        <p id="description11" style="position: absolute; top: 62pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 60pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 61pc; font-size: xx-small; left: 50%;" onclick="del11()">delete</button>
+    </div> 
+    <div> <!-- 12 -->
+        <p id="name12" style="position: absolute; top: 65pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 66.1pc; left: 7pc;" type="checkbox" disabled checked id="today12">
+        <p id="description12" style="position: absolute; top: 67pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 65pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 66pc; font-size: xx-small; left: 50%;" onclick="del12()">delete</button>
+    </div> 
+    <div> <!-- 13  -->
+        <p id="name13" style="position: absolute; top: 70pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 71.1pc; left: 7pc;" type="checkbox" disabled checked id="today13">
+        <p id="description13" style="position: absolute; top: 72pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 70pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 71pc; font-size: xx-small; left: 50%;" onclick="del13()">delete</button>
+    </div> <!-- 14 -->
+        <p id="name14" style="position: absolute; top: 75pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 76.1pc; left: 7pc;" type="checkbox" disabled checked id="today14">
+        <p id="description14" style="position: absolute; top: 77pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 75pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 76pc; font-size: xx-small; left: 50%;" onclick="del14()">delete</button>
+    </div>
+    <div> <!-- 15 -->
+        <p id="name15" style="position: absolute; top: 80pc; left: 0pc;">task name</p>
+        <input style="position: absolute; top: 81.1pc; left: 7pc;" type="checkbox" disabled checked id="today15">
+        <p id="description15" style="position: absolute; top: 82pc; left: 0pc;">task description</p>
+        <p style="position: absolute; top: 80pc; left: 9pc;">To day</p>
+        <button style="position: absolute; top: 81pc; font-size: xx-small; left: 50%;" onclick="del15()">delete</button>
+    </div>
+    <!-- background img -->
+    <div class="img"></div>
+    <!-- script -->
+    <script>
+    let maxtasks = 15;
+    let tasks = 0; // max 15
+    let ismaxtasks = (tasks >= maxtasks);
+    let can = true;
+
+    let is1 = false; is2 = false; is3 = false; is4 = false; is5 = false; 
+    let is6 = false; is7 = false; is8 = false; is9 = false; is10 = false; 
+    let is11 = false; is12 = false; is13 = false; is14 = false; is15 = false;
+
+    function addnewtask(){
+        if(!ismaxtasks && can){
+            tasks += 1;
+            ismaxtasks = (tasks >= maxtasks);
+            if(!is1){
+                document.getElementById("name1").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today1").checked = document.getElementById("today").checked;
+                document.getElementById("description1").textContent = document.getElementById("taskdescription").value;
+                is1 = true;
+            }
+            else if(!is2){
+                document.getElementById("name2").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today2").checked = document.getElementById("today").checked;
+                document.getElementById("description2").textContent = document.getElementById("taskdescription").value;
+                is2 = true;
+            }
+            else if(!is3){
+                document.getElementById("name3").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today3").checked = document.getElementById("today").checked;
+                document.getElementById("description3").textContent = document.getElementById("taskdescription").value;
+                is3 = true;
+            }
+            else if(!is4){
+                document.getElementById("name4").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today4").checked = document.getElementById("today").checked;
+                document.getElementById("description4").textContent = document.getElementById("taskdescription").value;
+                is4 = true;
+            }
+            else if(!is5){
+                document.getElementById("name5").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today5").checked = document.getElementById("today").checked;
+                document.getElementById("description5").textContent = document.getElementById("taskdescription").value;
+                is5 = true;
+            }
+            else if(!is6){
+                document.getElementById("name6").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today6").checked = document.getElementById("today").checked;
+                document.getElementById("description6").textContent = document.getElementById("taskdescription").value;
+                is6 = true;
+            }
+            else if(!is7){
+                document.getElementById("name7").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today7").checked = document.getElementById("today").checked;
+                document.getElementById("description7").textContent = document.getElementById("taskdescription").value;
+                is7 = true;
+            }
+            else if(!is8){
+                document.getElementById("name8").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today8").checked = document.getElementById("today").checked;
+                document.getElementById("description8").textContent = document.getElementById("taskdescription").value;
+                is8 = true;
+            }
+            else if(!is9){
+                document.getElementById("name9").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today9").checked = document.getElementById("today").checked;
+                document.getElementById("description9").textContent = document.getElementById("taskdescription").value;
+                is9 = true;
+            }
+            else if(!is10){
+                document.getElementById("name10").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today10").checked = document.getElementById("today").checked;
+                document.getElementById("description10").textContent = document.getElementById("taskdescription").value;
+                is10 = true;
+            }
+            else if(!is11){
+                document.getElementById("name11").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today11").checked = document.getElementById("today").checked;
+                document.getElementById("description11").textContent = document.getElementById("taskdescription").value;
+                is11 = true;
+            }
+            else if(!is12){
+                document.getElementById("name12").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today12").checked = document.getElementById("today").checked;
+                document.getElementById("description12").textContent = document.getElementById("taskdescription").value;
+                is12 = true;
+            }
+            else if(!is13){
+                document.getElementById("name13").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today13").checked = document.getElementById("today").checked;
+                document.getElementById("description13").textContent = document.getElementById("taskdescription").value;
+                is13 = true;
+            }
+            else if(!is14){
+                document.getElementById("name14").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today14").checked = document.getElementById("today").checked;
+                document.getElementById("description14").textContent = document.getElementById("taskdescription").value;
+                is14 = true;
+            }
+            else if(!is15){
+                document.getElementById("name15").textContent = document.getElementById("task name 1").value;
+                document.getElementById("today15").checked = document.getElementById("today").checked;
+                document.getElementById("description15").textContent = document.getElementById("taskdescription").value;
+                is15 = true;
+            }
+        }
+        else{
+            can = false;
+        }
+        saveTasks(); // <- tylko dodane
+    }
+
+    function del1(){ document.getElementById("name1").textContent = ""; document.getElementById("today1").checked = true; document.getElementById("description1").textContent = ""; is1 = false; saveTasks(); }
+    function del2(){ document.getElementById("name2").textContent = ""; document.getElementById("today2").checked = true; document.getElementById("description2").textContent = ""; is2 = false; saveTasks(); }
+    function del3(){ document.getElementById("name3").textContent = ""; document.getElementById("today3").checked = true; document.getElementById("description3").textContent = ""; is3 = false; saveTasks(); }
+    function del4(){ document.getElementById("name4").textContent = ""; document.getElementById("today4").checked = true; document.getElementById("description4").textContent = ""; is4 = false; saveTasks(); }
+    function del5(){ document.getElementById("name5").textContent = ""; document.getElementById("today5").checked = true; document.getElementById("description5").textContent = ""; is5 = false; saveTasks(); }
+    function del6(){ document.getElementById("name6").textContent = ""; document.getElementById("today6").checked = true; document.getElementById("description6").textContent = ""; is6 = false; saveTasks(); }
+    function del7(){ document.getElementById("name7").textContent = ""; document.getElementById("today7").checked = true; document.getElementById("description7").textContent = ""; is7 = false; saveTasks(); }
+    function del8(){ document.getElementById("name8").textContent = ""; document.getElementById("today8").checked = true; document.getElementById("description8").textContent = ""; is8 = false; saveTasks(); }
+    function del9(){ document.getElementById("name9").textContent = ""; document.getElementById("today9").checked = true; document.getElementById("description9").textContent = ""; is9 = false; saveTasks(); }
+    function del10(){ document.getElementById("name10").textContent = ""; document.getElementById("today10").checked = true; document.getElementById("description10").textContent = ""; is10 = false; saveTasks(); }
+    function del11(){ document.getElementById("name11").textContent = ""; document.getElementById("today11").checked = true; document.getElementById("description11").textContent = ""; is11 = false; saveTasks(); }
+    function del12(){ document.getElementById("name12").textContent = ""; document.getElementById("today12").checked = true; document.getElementById("description12").textContent = ""; is12 = false; saveTasks(); }
+    function del13(){ document.getElementById("name13").textContent = ""; document.getElementById("today13").checked = true; document.getElementById("description13").textContent = ""; is13 = false; saveTasks(); }
+    function del14(){ document.getElementById("name14").textContent = ""; document.getElementById("today14").checked = true; document.getElementById("description14").textContent = ""; is14 = false; saveTasks(); }
+    function del15(){ document.getElementById("name15").textContent = ""; document.getElementById("today15").checked = true; document.getElementById("description15").textContent = ""; is15 = false; saveTasks(); }
+
+    // --- Funkcje do zapisu i wczytania ---
+    function saveTasks() {
+        const tasksData = [];
+        for (let i = 1; i <= maxtasks; i++) {
+            tasksData.push({
+                name: document.getElementById("name" + i).textContent,
+                today: document.getElementById("today" + i).checked,
+                description: document.getElementById("description" + i).textContent,
+                active: window["is" + i]
+            });
+        }
+        localStorage.setItem("myTasks", JSON.stringify(tasksData));
+    }
+
+    function loadTasks() {
+        const tasksData = JSON.parse(localStorage.getItem("myTasks") || "[]");
+        if (tasksData.length === 0) return;
+        tasks = 0; // reset
+        for (let i = 0; i < tasksData.length; i++) {
+            const t = tasksData[i];
+            document.getElementById("name" + (i+1)).textContent = t.name;
+            document.getElementById("today" + (i+1)).checked = t.today;
+            document.getElementById("description" + (i+1)).textContent = t.description;
+            window["is" + (i+1)] = t.active;
+            if(t.active) tasks++;
+        }
+        ismaxtasks = (tasks >= maxtasks);
+        can = true;
+    }
+
+    // --- Automatyczne wczytanie przy starcie ---
+    window.onload = loadTasks;
+</script>
+
+</body>
+</html>
